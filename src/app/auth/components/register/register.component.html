@@ -1,0 +1,17 @@
+<div class="content">
+    <div class="card" [formGroup]="form">
+        <mat-form-field>
+            <mat-label>E-mail address</mat-label>
+            <input matInput formControlName="userEmail">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password">
+        </mat-form-field>
+
+        <div class="buttons">
+            <button mat-button [disabled]="form.invalid" (click)="tryRegister()">Register</button>
+            <button mat-button  (click)="navigateToLogin()">Back</button>
+        </div>
+    </div>
+</div>
